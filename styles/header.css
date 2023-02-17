@@ -1,0 +1,119 @@
+.cabeçalho__menu-hamburguer {
+    width: 24px;
+    height: 36px;
+    background-image: url("../img/Menu.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    display: inline-block;
+}
+.cabeçalho {
+    background-color: var(--branco);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+}
+
+.container__imagem {
+    padding: 0.5em;
+}
+
+.lista-menu{
+    display: none; 
+    position:absolute ;
+    top: 100%;
+}
+
+.container__botao:checked ~ .lista-menu {
+    display: block;
+}
+
+.lista-menu__titulo,
+.lista-menu__item {
+    padding: 1em;
+    background-color: var(--branco);
+    width: 60vw;
+}
+.lista-menu__titulo {
+    color: var(--laranja);
+    font-weight: 700;
+}
+
+.lista-menu__link {
+    background: linear-gradient(97.54deg, #002F52 35.49%, #326589 165.37%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;    /*<--->*/ /*Esses webkit servem para que funcionem em outros navegadores*/
+    background-clip: text;
+    text-transform: uppercase;
+}
+
+.container__botao {
+    display: none;
+}
+
+.container__titulo{
+    display: none;
+}
+
+.opcoes {
+    display: none;
+}
+
+@media screen and (min-width: 1024px) {
+
+    .container__titulo--negrito,
+    .container__titulo {
+        font-family: var(--fonte-secundario);
+        font-size: 30px;
+    }
+
+    .container__titulo--negrito{
+        font-weight: 700;
+    }
+
+    .container__titulo{
+        font-weight: 400;
+        display: block;
+    }
+
+    .opcoes {
+        display: flex;
+    }
+
+    .opcoes__item {
+        padding: 0 1em;
+    }
+
+    .opcoes__link {
+        text-decoration: none;
+        color: var(--preto);
+    }
+
+    .cabeçalho__menu-hamburguer {
+        display: none;
+    }
+
+    .container__imagem-transparente {
+        display: none;
+    }
+
+    .botão__opcoes:checked ~ .lista-menu {
+        display: block;
+        width: 10px;
+    }
+
+    .botão__opcoes {
+        display: none;
+    }
+
+    .lista-menu__item {
+        width: 20vw;
+    }
+
+    
+}
